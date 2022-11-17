@@ -19,7 +19,7 @@ width: 200px;
 padding: 20px;
 text-align: center;
 background: url("images/cocktail.gif") repeat-x;
-line-height: 1;}
+line-height: 1; float: right;}
 #elixirs h2{color: black;}
 #elixirs h3 {color: #d12c47;}
 #footer {font-size: 50%;
