@@ -13,7 +13,15 @@
   </div>
 
   <script>
+//Клонирование элемента
+//если указать false, то клонируются и дочерние элементы
+let div = document.querySelector('div')
 
+let div2 = div.cloneNode(true) 
+//поиск не внутри документа, а внутри элемента
+div2.querySelector('p').textContent = "Еще одно сообщение" 
+//размещение после первого div
+div.after(div2)
   </script>
 </body>
 </html>

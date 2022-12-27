@@ -16,9 +16,11 @@
   <div id="two">Два</div>
 
   <script>
+//удаление элемента через время
 let div = document.querySelector('div')
 setTimeout(() => {
 div.remove()
+//и поменять местами расположение
 two.after(one)
 }, 2000)
 

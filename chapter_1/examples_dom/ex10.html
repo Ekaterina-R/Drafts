@@ -10,16 +10,24 @@
   <p title="Подсказка" class="text">Абзац текста</p>
 
   <script>
+//работа с аттрибутами html тегов
 let elem = document.querySelector('p')
-//elem.setAttribute("class", "new_text")
+//добавление класса new_text
+elem.setAttribute("class", "new_text")
+//добавление id new_text
 elem.setAttribute("id", "new_text")
+//.hasAttribute проверка наличия атрибута true/false
 console.log(elem.hasAttribute('title'))
-//console.log(elem.getAttribute('title'))
+//.getAttribute получение значения атрибута
+console.log(elem.getAttribute('title'))
+//пройтись по всем атрибутам и вывести их значения
 for(let attr of elem.attributes) {
-  console.log(`${attr.name} = ${attr.value}`)
+console.log(`${attr.name} = ${attr.value}`)
 }
-//elem.removeAttribute("title")
-//console.dir(elem)
+//удаление атрибута
+elem.removeAttribute("title")
+//вывести в консоль элемент и все его свойства
+console.dir(elem)
   </script>
 </body>
 </html>

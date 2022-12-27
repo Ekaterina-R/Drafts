@@ -15,9 +15,14 @@
 
   <script>
 let ul = document.querySelector('ul')
+//первый параметр - куда вставляем элемент, второй - сам элемент
+// перед <ul>, не внутри него
 ul.insertAdjacentHTML('beforebegin', '<p>Сообщение</p>')
-//ul.insertAdjacentHTML('afterend', '<p>Сообщение 1</p>')
+//после <ul>,
+ul.insertAdjacentHTML('afterend', '<p>Сообщение 1</p>')
+//в начале <ul>
 ul.insertAdjacentHTML('afterbegin', '<li>Сообщение 2</li>')
+//в конце <ul>
 ul.insertAdjacentHTML('beforeend', '<li>Сообщение 3</li>')
   </script>
 </body>

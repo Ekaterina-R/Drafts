@@ -12,6 +12,8 @@
   <a href="http://mail.ru">Ссылка 3</a><br>
 
   <script>
+// поиск значений в зоне ru и замена их текста
+//document.body.children - все элементы в body
 for(let element of document.body.children) {
   if(element.matches('a[href$=".ru"]')) {
     element.innerHTML = "Сайт в зоне .ru"

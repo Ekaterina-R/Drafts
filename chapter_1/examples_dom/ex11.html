@@ -6,7 +6,8 @@
   <title>Пример 11</title>
 </head>
 <body>
-  
+  <!--создание своих атрибутов. Начинать со слова data- 
+  и далее обращение к их свойствам-->
   <p data-about="Это текст">Абзац текста</p>
   <div data-about-block="Это блок">Блок текста</div>
 
@@ -14,6 +15,7 @@
 let elem1 = document.querySelector('p')
 console.log(elem1.dataset.about)
 let elem2 = document.querySelector('div')
+//.aboutBlock - удаляем все дефисы для обращения
 console.log(elem2.dataset.aboutBlock)
   </script>
 </body>

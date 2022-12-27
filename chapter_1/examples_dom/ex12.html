@@ -8,21 +8,29 @@
 </head>
 <body>
   <p>Разделитель</p>
-  <hr>
+  <hr> <!--разделитель-->
   <script>
 let div = document.createElement('div')
+//установка класса переменной
 div.className = "alert"
 div.innerHTML = '<p>Важное сообщение</p>'
-//document.body.append(div)
-//document.body.prepend(div)
-//document.body.before(div)
+//добавление в самй низ, даже после тега <script>
+document.body.append(div)
+//добавление в самое начало <body>
+document.body.prepend(div)
+//добавление перед <body> - не совсем коррекктно
+document.body.before(div)
+//добавление div после разделителя
 document.querySelector('hr').after(div)
 
 
 //let div = document.createElement('div')
 //let p = document.createElement('p')
 //p.textContent = 'Важное сообщение!'
+//добавление элемента <div> перед <p>
 //div.append(p) или
+
+//несколько элементов, которые можно сразу же и создать
 //div.append(p, document.createElement('hr')) или
 
 //div.append(Важное сообщение, document.createElement('hr'))
