@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Пример 18 - Календарь</title>
+</head>
+
+<body>
+  <!--<div class="container"></div>-->
+
+  <script>
+    //elem - элемент, в который будет вставлен календарь
+function createCalendar(elem, year, month) {
+  elem = document.querySelector(elem)
+//чтобы меяца соответствовали своим номерам, не с 0 начинались
+  let mon = month - 1;
+  let d = new Date(year, mon);
+  //тег caption (заголовок таблицы) необходимо перенести в тег table, а не добавлять его снаружи,
+  //в уроке написано как здесь. Нифига не работает
+  let table = '
+  <caption>${month}.${year}</caption>
+  <table>
+       <tr>
+      <th>Пн</th> 
+      <th>Вт</th>
+      <th>Ср</th>
+       <th>Чт</th>
+        <th>Пт</th> 
+        <th>Сб</th> 
+        <th>Вс</th> 
+</tr> 
+<tr>
+  ';
+
+  for(let i = 0; i < getDay(d); i++){
+   table += '<td></td>' 
+  }
+
+  while(d.getMonth() == mon) {
+    table += '<td>' + d.getDate() + '</td>'
+  }
+
+  table += '</tr></table>';
+  elem.innerHTML = table
+}
+
+    //чтобы неделя начиналась с понедельника, а не с воскресенья
+    //0 будет понедельник, а 6 - воскресенье
+    function getDay(date) {
+      let day = date.getDay();
+      if (day == 0) day = 7;
+      return day - 1;
+    }
+createCalendar('body', 2023, 1)
+    
+  </script>
+</body>
+
+</html>
